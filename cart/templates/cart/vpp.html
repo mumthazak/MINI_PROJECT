@@ -1,0 +1,38 @@
+{% extends 'temp/user.html' %}
+{% block base %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+     <center>
+         <h1>cart</h1>
+         <table border="2" align="center">
+         <tr>
+            <th>product</th>
+            <th>image</th>
+            <th>price</th>
+         </tr>
+         {% for i in x %}
+         <tr>
+            <td>{{ i.p.p_name }}</td>
+            <td><img src="/static/{{ i.p.image }}" height="150" width="150"></td>
+            <td>{{ i.p.amount }}</td>
+         <td><a href="">order</a> </td>
+        </tr>
+        {% endfor %}
+        </table>
+
+     </center>
+</body>
+</html>
+{% endblock %}
+
+
+
